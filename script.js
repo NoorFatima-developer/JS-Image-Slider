@@ -38,3 +38,6 @@ for(let i=0; i<length; i++){
     div.className = "btn"
     bottom.appendChild(div)
 }
+
+const buttons = document.querySelectorAll('.btn')
+buttons[0].style.backgroundColor = 'white';

@@ -10,13 +10,25 @@ const nextSlide = () => {
   slider.style.transform = `translateX(-${slideNumber * 600}px)`;
   slideNumber++;
 };
+const previousSlide = () => {
+  slider.style.transform = `translateX(-${(slideNumber-2) * 600}px)`;
+  slideNumber--;
+};
 
 const getFirstSlide = () => {
   slider.style.transform = `translateX(0px)`;
   slideNumber = 1;
 };
+const getLastSlide = () => {
+  slider.style.transform = `translateX(-${(length - 1)*800})`;
+  slideNumber = length;
+};
 
 right.addEventListener("click", () => {
     
     slideNumber < length ? nextSlide() : getFirstSlide();
+});
+left.addEventListener("click", () => {
+    
+    slideNumber < length ? previousSlide() : getLastSlide();
 });

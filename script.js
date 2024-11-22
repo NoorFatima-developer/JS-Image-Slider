@@ -41,3 +41,13 @@ for(let i=0; i<length; i++){
 
 const buttons = document.querySelectorAll('.btn')
 buttons[0].style.backgroundColor = 'white';
+
+const resetBtn = () => {
+
+}
+
+buttons.forEach((button, i) => {
+    button.addEventListener('click', () =>{
+        slider.style.transform = `translateX(-${i*800}px)`;
+    })
+});

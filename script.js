@@ -30,3 +30,11 @@ right.addEventListener("click", () => {
 left.addEventListener("click", () => {
     slideNumber > 1 ? previousSlide() : getLastSlide();
 });
+
+const bottom = document.querySelector('.bottom')
+
+for(let i=0; i<length; i++){
+    const div = document.createElement('div');
+    div.className = "btn"
+    bottom.appendChild(div)
+}

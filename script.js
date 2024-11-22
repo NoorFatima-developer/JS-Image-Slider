@@ -20,15 +20,13 @@ const getFirstSlide = () => {
   slideNumber = 1;
 };
 const getLastSlide = () => {
-  slider.style.transform = `translateX(-${(length - 1)*800})`;
+  slider.style.transform = `translateX(-${(length - 1)*600}px)`;
   slideNumber = length;
 };
 
 right.addEventListener("click", () => {
-    
     slideNumber < length ? nextSlide() : getFirstSlide();
 });
 left.addEventListener("click", () => {
-    
-    slideNumber < length ? previousSlide() : getLastSlide();
+    slideNumber > 1 ? previousSlide() : getLastSlide();
 });

@@ -32,13 +32,12 @@ body {
 .slider {
     display: flex;
     transition: all 0.5s ease-in-out;
-    /* width: calc(600px * 4); */
-    width: 100%;
+    width: calc(600px * 4); /* Adjust based on the number of images */
 }
 
 .slider img {
-    width:600px;
-    height: 400px;
     object-fit: cover;
     object-position: center;
+    width: 600px;
+    height: 400px
 }

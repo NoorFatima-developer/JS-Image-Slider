@@ -22,6 +22,8 @@ buttons[0].style.backgroundColor = "white";
 const resetBtn = () => {
   buttons.forEach((button) => {
     button.style.backgroundColor = "transparent";
+    button.addEventListener('mouseover', stopSlideShow);
+    button.addEventListener('mouseout', startSlideShow);
   });
 };
 
@@ -77,7 +79,7 @@ const startSlideShow = () => {
     slideInterval = setInterval(()=>{
         slideNumber < length ? nextSlide() : getFirstSlide();
         changeColor();
-    }, 2000)
+    }, 1000)
 }
 
 const stopSlideShow = () => {
@@ -87,4 +89,8 @@ const stopSlideShow = () => {
 startSlideShow();
 slider.addEventListener('mouseover', stopSlideShow);
 slider.addEventListener('mouseout', startSlideShow);
+left.addEventListener('mouseover', stopSlideShow);
+left.addEventListener('mouseout', startSlideShow);
+right.addEventListener('mouseover', stopSlideShow);
+right.addEventListener('mouseout', startSlideShow);
 

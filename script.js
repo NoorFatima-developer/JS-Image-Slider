@@ -6,7 +6,6 @@ const images = document.querySelectorAll(".image");
 let slideNumber = 1;
 const length = images.length;
 
-
 // Slider buttons working:
 const bottom = document.querySelector(".bottom");
 

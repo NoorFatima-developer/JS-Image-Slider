@@ -80,4 +80,11 @@ const startSlideShow = () => {
     }, 2000)
 }
 
-startSlideShow()
+const stopSlideShow = () => {
+    clearInterval(slideInterval);
+}
+
+startSlideShow();
+slider.addEventListener('mouseover', stopSlideShow);
+slider.addEventListener('mouseout', startSlideShow);
+
